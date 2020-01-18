@@ -1,22 +1,21 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {environment} from '../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-accesstoken = '94b1ef1e4a38ee64edadf4f902b608d76003eadd';
-
 
   constructor(private http: HttpClient) { }
 
   userRequest() {
     const promise = new Promise((resolve, reject) => {
-      this.http.get('https://api.github.com/user', {
+      this.http.get(environment.baseUrl, {
       headers: {
-      Authorization: `Bearer ${this.accesstoken}`
+      Authorization: `Bearer ${environment.accessToken}`
       }
       }).toPromise().then(response => {
-        console.log(response);
+        console.log('This works', response);
         resolve();
       },
       error => {
