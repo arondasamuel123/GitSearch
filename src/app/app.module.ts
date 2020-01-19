@@ -7,13 +7,15 @@ import { UserComponent } from './user/user.component';
 import { SearchComponent } from './search/search.component';
 import {FormsModule} from '@angular/forms';
 import { RepoComponent } from './repo/repo.component';
+import { FontSwitcherDirective } from './font-switcher.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     SearchComponent,
-    RepoComponent
+    RepoComponent,
+    FontSwitcherDirective
   ],
   imports: [
     BrowserModule,
