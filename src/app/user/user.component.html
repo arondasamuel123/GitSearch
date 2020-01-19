@@ -5,4 +5,20 @@
 <img src="{{user.avatarUrl}}" width="200px" height="200px" alt="">
 </div>
 </div>
+
+<br>
+<table class="table info-repos">
+  <tbody>
+    <tr *ngFor='let r of repos'>
+      <td>
+        <a href="{{r.html_url}}" target="_blank" appFontChanger>{{r.name}}</a>
+        <br>
+        <p>Description: {{r.description}}</p>
+        <br>
+        <p>Date Created: {{r.created_at}}</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 </div>
