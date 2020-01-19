@@ -18,7 +18,7 @@ q: string;
   userSearch() {
 
     const promise = new Promise((resolve, reject) => {
-      this.http.get(`${environment.searchUrl}users?q=${this.q}+repos:%3E15+followers:%3E5`, {
+      this.http.get(`${environment.searchUrl}users?q=${this.q}+repos:%3E15+followers:%3E0`, {
           headers: {
             Authorization: `Bearer ${environment.accessToken}`
           }

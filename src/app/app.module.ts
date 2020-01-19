@@ -8,6 +8,7 @@ import { SearchComponent } from './search/search.component';
 import {FormsModule} from '@angular/forms';
 import { RepoComponent } from './repo/repo.component';
 import { FontSwitcherDirective } from './font-switcher.directive';
+import { GithubRoutingModule } from './github-routing.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FontSwitcherDirective } from './font-switcher.directive';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    GithubRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
