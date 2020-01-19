@@ -1,7 +1,26 @@
 <div class="container">
 <div align="center">
-<input class="input" #searchName>
+<form  (ngSubmit)='userSearch()'>
+<input class="input" name="q" [(ngModel)]="q">
+<button  class="btn btn-success" type="submit">SEARCH</button><br>
+</form>
+<div  class="row">
+  <div *ngFor='let u of users'>
+    <table class="table info-bio">
+      <tbody>
+        <tr>
+          <th scope="row">Username:</th>
+          <td>{{u.login}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Profile Photo:</th>
+          <td><img src="{{u.avatar_url}}" alt="" width="100px" height="100px"></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+</div>
 
-  <button  class="btn btn-success">SEARCH</button><br>
+
 </div>
 </div>
