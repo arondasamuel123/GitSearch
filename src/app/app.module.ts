@@ -10,6 +10,7 @@ import { RepoComponent } from './repo/repo.component';
 import { FontSwitcherDirective } from './font-switcher.directive';
 import { GithubRoutingModule } from './github-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     SearchComponent,
     RepoComponent,
     FontSwitcherDirective,
-    NavbarComponent
+    NavbarComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
