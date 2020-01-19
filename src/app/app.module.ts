@@ -9,6 +9,7 @@ import {FormsModule} from '@angular/forms';
 import { RepoComponent } from './repo/repo.component';
 import { FontSwitcherDirective } from './font-switcher.directive';
 import { GithubRoutingModule } from './github-routing.module';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GithubRoutingModule } from './github-routing.module';
     UserComponent,
     SearchComponent,
     RepoComponent,
-    FontSwitcherDirective
+    FontSwitcherDirective,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
