@@ -12,6 +12,7 @@ import { GithubRoutingModule } from './github-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { SearchRepoComponent } from './search-repo/search-repo.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SearchRepoComponent } from './search-repo/search-repo.component';
     FontSwitcherDirective,
     NavbarComponent,
     UserDetailsComponent,
-    SearchRepoComponent
+    SearchRepoComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
