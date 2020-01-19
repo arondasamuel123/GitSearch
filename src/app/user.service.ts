@@ -61,7 +61,7 @@ repos:any;
 
             this.repos = response[0];
           //  console.log(this.repos.id);
-            console.log(response);
+            //console.log(response);
             resolve();
       },
       error => {
