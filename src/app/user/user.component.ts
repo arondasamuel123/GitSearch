@@ -11,7 +11,7 @@ import { Repo } from '../repo';
 export class UserComponent implements OnInit {
 
   user: User;
-  repos;
+
 
   constructor(private userService: UserService) { }
 
@@ -19,8 +19,8 @@ export class UserComponent implements OnInit {
     this.userService.userRequest();
     this.user = this.userService.user;
 
-    this.userService.repoRequest();
-    this.repos = this.userService.repos;
+    // this.userService.repoRequest();
+    // this.repos = this.userService.repos;
   }
 
 }

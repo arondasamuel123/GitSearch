@@ -45,30 +45,34 @@ repos:any;
 
   }
 
-  repoRequest() {
-    // interface ApiResponse {
-    //   name: string;
-    //   html_url: string;
-    //   description: string;
-    //   created_at: Date;
-    // }
-    const promise = new Promise((resolve, reject) => {
-      this.http.get(`${environment.baseUrl}/repos`, {
-          headers: {
-            Authorization: `Bearer ${environment.accessToken}`
-          }
-      }).toPromise().then(response => {
+  // repoRequest() {
+  //   // interface ApiResponse {
+  //   //   name: string;
+  //   //   html_url: string;
+  //   //   description: string;
+  //   //   created_at: Date;
+  //   // }
+  //   const promise = new Promise((resolve, reject) => {
+  //     this.http.get(`${environment.baseUrl}/repos`, {
+  //         headers: {
+  //           Authorization: `Bearer ${environment.accessToken}`
+  //         }
+  //     }).toPromise().then(response => {
 
-            this.repos = response[0];
-          //  console.log(this.repos.id);
-            //console.log(response);
-            resolve();
-      },
-      error => {
-        console.log('This isn\'t working');
-        reject(error);
-      });
-    });
-    return promise;
+  //           this.repos = response[0];
+  //         //  console.log(this.repos.id);
+  //           //console.log(response);
+  //           resolve();
+  //     },
+  //     error => {
+  //       console.log('This isn\'t working');
+  //       reject(error);
+  //     });
+  //   });
+  //   return promise;
+  // }
+
+  getUser(username: string) {
+    return this.http.get(`${environment.apiUrl}${username}/repos`);
   }
 }
